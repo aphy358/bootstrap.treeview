@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Tests for TreeView</title>
+		<link href="./css/bootstrap-treeview.css" rel="stylesheet" />
+		
+		 <style type="text/css">
+        body {
+            background-color: #808080;
+        }
+
+        #tree {
+            width: 96%;
+            position: absolute;
+            left: 2%;
+            top: 10%;
+        }
+    </style>
+	</head>
+
+	<body>
+
+		<script src="./js/jquery-1.11.3.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/bootstrap-treeview.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				var tree = [{
+						text: "Parent",
+						nodeId: 0,
+						state: {
+							expanded: true,
+						}
+					}, //#F1FDB5
+					{
+						text: "Child",
+						nodeId: 1,
+						parentId: 0,
+						state: {
+							expanded: true,
+						}
+					}, {
+						text: "Grandchild",
+						nodeId: 2,
+						parentId: 1,
+						state: {
+							expanded: true,
+						},
+						isLeaf: true,
+					}, {
+						text: "Child",
+						nodeId: 3,
+						parentId: 0,
+						state: {
+							expanded: true,
+						}
+					}, {
+						text: "Grandchild",
+						nodeId: 4,
+						parentId: 3,
+						state: {
+							expanded: true,
+						},
+						isLeaf: true,
+					}, {
+						text: "Grandchild",
+						nodeId: 5,
+						parentId: 3,
+						state: {
+							expanded: true,
+						},
+						isLeaf: true,
+					},
+				];
+				var tmp = $('#tree').treeview({
+					data: tree
+				});
+			});
+			
+			function go() {
+                alert("Go Search!");
+            };
+
+            function message() {
+                alert("Sending Message!");
+            };
+		</script>
+	</body>
+
+</html>
