@@ -6,7 +6,7 @@
 
 UI只是粗略設計，請各位見諒！
 
-![View](https://github.com/aphy358/bootstrap.treeview/blob/master/screenshot.jpg)
+![View](https://github.com/aphy358/bootstrap.treeview-/blob/master/img/screenshot.jpg)
 
 
 ## Dependencies
@@ -35,7 +35,7 @@ UI只是粗略設計，請各位見諒！
 
 ### Difference with Original
 
-1、首先，原插件需要再页面预留一个DOM元素：'<div id="tree"></div>',改动之后，如果页面没有这个DOM元素，则将会自动添加。
+1、首先，原插件需要再页面预留一个DOM元素：<div id="tree"></div>,改动之后，如果页面没有这个DOM元素，则将会自动添加。
 	
 2、其次，原插件在构建属控件时传入的参数格式非常复杂，不好操作，因此我扩展了一个方法Tree.prototype.initData，现在您只需传入如下格式的数据即可：
 
